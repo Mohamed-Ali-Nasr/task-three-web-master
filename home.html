@@ -1,0 +1,236 @@
+<!-- HTML Login Page -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Meta Description -->
+    <meta
+      name="description"
+      content="shopping cart project with tailwind css and vanilla js"
+    />
+    <!-- CSS Link -->
+    <link rel="stylesheet" href="css/output.css" />
+    <!-- Page Title -->
+    <title>Shopping Cart</title>
+  </head>
+  <body>
+    <div class="flex flex-col h-screen">
+      <!-- Start Navbar -->
+      <nav class="bg-[#eee] select-none shadow-md fixed z-30 w-full">
+        <div class="max-w-7xl md:px-6 lg:px-8 px-2 mx-auto">
+          <div class="relative flex items-center justify-between h-16">
+            <div class="flex items-center flex-shrink-0">
+              <a href="/welcome.html">
+                <img class="w-auto h-12" src="./assets/image.png" alt="logo" />
+              </a>
+            </div>
+
+            <div class="md:block md:ml-6 hidden">
+              <img class="w-auto h-12" src="./assets/logo.png" alt="logo" />
+            </div>
+
+            <div class="flex">
+              <li class="flex items-center justify-center ml-2">
+                <a
+                  class="hover:bg-teal-500 hover:text-white text-gray-500 px-3 py-1.5 rounded-md font-semibold transition-all duration-300"
+                  href="home.html"
+                  >Home</a
+                >
+              </li>
+
+              <li class="flex items-center justify-center mx-2">
+                <a
+                  class="hover:bg-teal-500 hover:text-white text-gray-500 px-3 py-1.5 rounded-md font-semibold transition-all duration-300"
+                  href="cart.html"
+                  >My Cart</a
+                >
+              </li>
+
+              <li
+                class="flex items-center justify-center ml-2 sm:mr-3 relative p-1 mr-1 text-center bg-teal-500 rounded-full cursor-pointer"
+                id="profile-button"
+              >
+                <span
+                  class="px-1.5 text-xl text-white"
+                  id="first-letter"
+                ></span>
+              </li>
+              <div
+                id="profile-menu"
+                class="hidden w-44 top-16 right-2 absolute z-10 bg-white divide-y divide-teal-500 rounded-lg shadow"
+              >
+                <div class="p-4 text-sm text-gray-900">
+                  <div class="font-medium truncate" id="username"></div>
+                </div>
+
+                <div
+                  id="logout-button"
+                  class="hover:bg-gray-100 hover:text-teal-500 p-4 text-sm text-gray-700 cursor-pointer"
+                >
+                  <a href="index.html">Logout</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <!-- End Navbar -->
+
+      <!-- Start Main Content -->
+      <div
+        class="bg-[url('../../assets/light-patten.svg')] bg-center flex-1 mt-16"
+      >
+        <main class="container px-4 mx-auto overflow-hidden">
+          <section class="md:my-20 my-8">
+            <div class="container px-4 mx-auto">
+              <h2 class="text-3xl font-semibold text-gray-500 mb-8">
+                Popular Products
+              </h2>
+              <div
+                id="products-container"
+                class="md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mD:gap-8 grid grid-cols-1 gap-16"
+              ></div>
+            </div>
+          </section>
+        </main>
+      </div>
+      <!-- End Main Content -->
+
+      <!-- Start Footer -->
+      <footer class="bg-[#eee] py-16">
+        <div class="container px-4 mx-auto">
+          <div class="mb-2">
+            <h3 class="mb-1 text-2xl">Get The ShoppingCart App</h3>
+            <p class="text-gray-500">
+              We will send you a link, open it on your phone to download the
+              app.
+            </p>
+          </div>
+
+          <div
+            class="sm:flex-row sm:gap-8 flex flex-col items-center gap-4 pt-4 pb-6"
+          >
+            <input
+              type="text"
+              placeholder="Email .."
+              class="h-[35px] rounded-lg border border-solid border-gray-300 px-4 focus:shadow-input-focus focus:outline-none font-medium py-2 flex-1 sm:mb-0 w-full bg-white"
+            />
+            <button
+              class="hover:bg-teal-600 sm:w-auto w-full px-6 py-1 font-semibold text-center text-white transition-all duration-300 bg-teal-500 rounded-lg cursor-pointer"
+            >
+              Share App Link
+            </button>
+          </div>
+
+          <div class="border-y py-4 border-gray-300">
+            <div class="lg:flex-row flex flex-col items-center justify-between">
+              <div class="lg:mb-0 mb-3">
+                <ul class="flex items-center justify-center">
+                  <li class="mr-2 font-medium">Payment Partners</li>
+                  <li class="mr-2">
+                    <a href="#">
+                      <img src="./assets/amazonpay.svg" alt="amazon" />
+                    </a>
+                  </li>
+                  <li class="mr-2">
+                    <a href="#">
+                      <img
+                        src="./assets/american-express.svg"
+                        alt="american-express"
+                      />
+                    </a>
+                  </li>
+                  <li class="mr-2">
+                    <a href="#">
+                      <img src="./assets/mastercard.svg" alt="mastercard" />
+                    </a>
+                  </li>
+                  <li class="mr-2">
+                    <a href="#">
+                      <img src="./assets/paypal.svg" alt="paypal" />
+                    </a>
+                  </li>
+                  <li class="mr-2">
+                    <a href="#">
+                      <img src="./assets/visa.svg" alt="visa" />
+                    </a>
+                  </li>
+                </ul>
+              </div>
+
+              <div>
+                <ul
+                  class="lg:flex-row flex flex-col items-center justify-center"
+                >
+                  <li class="lg:mb-0 mb-3 mr-4 font-medium">
+                    Get deliveries with FreshCart
+                  </li>
+                  <div class="flex">
+                    <li class="sm:ml-4 mr-2">
+                      <a href="#">
+                        <img
+                          src="./assets/googleplay-btn.svg"
+                          alt="google-paly"
+                        />
+                      </a>
+                    </li>
+                    <li class="mr-2">
+                      <a href="#">
+                        <img src="./assets/appstore-btn.svg" alt="app-store" />
+                      </a>
+                    </li>
+                  </div>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="md:flex-row md:items-center flex flex-col items-start justify-between py-5"
+          >
+            <div class="md:mb-0 mb-4">
+              <span class="text-sm font-medium text-gray-400">
+                © 2022 <span> - 2024 </span>
+                ShoppingCart e-Commerce HTML Template. All rights reserved.
+              </span>
+              <p class="text-sm font-medium text-gray-400">
+                Powered by
+                <a href="https://codescandy.com/" class="text-teal-500">
+                  Codescandy
+                </a>
+              </p>
+            </div>
+            <div>
+              <ul class="flex items-center text-sm font-medium text-gray-400">
+                <li class="mr-3">Follow us on</li>
+                <li
+                  class="hover:text-teal-500 mr-3 transition-all duration-300 cursor-pointer"
+                >
+                  <i class="fab fa-facebook-f text-[25px]"></i>
+                </li>
+                <li
+                  class="hover:text-teal-500 mr-3 transition-all duration-300 cursor-pointer"
+                >
+                  <i class="fab fa-twitter text-[25px]"></i>
+                </li>
+                <li
+                  class="hover:text-teal-500 transition-all duration-300 cursor-pointer"
+                >
+                  <i class="fab fa-instagram text-[25px]"></i>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- End Footer -->
+
+      <div id="notifications"></div>
+    </div>
+
+    <!-- Login Js file -->
+    <script src="js/logout.js" defer></script>
+    <script src="js/home.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: #fff;
+  border-left: 2px solid #eee;
+  box-shadow: 0px 0px 21px 0px #0003 inset;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #00bba7;
+  box-shadow: 0px 0px 10px 0px #eeeeee8c inset;
+  border-radius: 100vh;
+}
+
+#notifications {
+  position: fixed;
+  z-index: 1000;
+  right: 0;
+  top: 60px;
+}
+.notification {
+  min-width: 300px;
+  min-height: 60px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+.notification .content {
+  text-align: center;
+  padding: 5px;
+  margin: auto;
+}
+.notification h1 {
+  margin-top: 13px;
+  font-size: 20px;
+}
+.notification.add {
+  background-color: #abffcd;
+}
+.notification.warning {
+  background-color: #ffc693;
+}
+.notification.delete {
+  background-color: #ff9593;
+}
+.notification .progressDiv div {
+  margin-top: 10px;
+  height: 3px;
+  width: 0%;
+  box-shadow: 0 0 1px black;
+}
+.notification.add .content {
+  color: #009e0a;
+}
+.notification.warning .content {
+  color: #c55c00;
+}
+.notification.delete .content {
+  color: #b30300;
+}
+.notification.add .progressDiv div {
+  background-color: #009e0a;
+}
+.notification.warning .progressDiv div {
+  background-color: #c55c00;
+}
+.notification.delete .progressDiv div {
+  background-color: #b30300;
+}
